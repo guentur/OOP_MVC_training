@@ -11,7 +11,7 @@ $cities = [
 
 foreach($cities as $city) {
     echo $city->getName() . 
-        ' ' . $city->population . " населения" .'<br />';
+        ' ' . $city->population . " населения " .'<br />';
 }
 
 
