@@ -1,5 +1,5 @@
 <?php
-require_once "../classes/City.php";
+require_once "City.php";
 
 $cities = [
     new City("Новая Каховка", 46044),

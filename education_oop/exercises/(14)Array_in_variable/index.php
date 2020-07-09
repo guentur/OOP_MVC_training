@@ -1,5 +1,5 @@
 <?php
-require_once "../classes/(14)Array_in_variable.php";
+require_once "Array_in_variable.php";
 
 //=============================
 $user = new User("Валера", 20);
