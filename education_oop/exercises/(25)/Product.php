@@ -43,10 +43,19 @@ class Cart
         $this->products[] = $products;
     }
 
-                                function remove($name) {
+    function remove($name) {
+        $obj = $this->search($name);
+        // array_diff($array, ["a", "c"]);
+                            //└────────┘→ Значения массива, которые нужно удалить
+        //array_splice($products, $key); Удаление со здвигом
+        $products = $this->products;
+        $key = array_search($obj, $products);
+        var_dump($key);
+        var_dump($products[$key]);
 
-                                    
-                                }
+        unset($products[$key]);
+        sort($products);
+    }
 
     //======================== /Действия/
 
@@ -82,23 +91,38 @@ class Cart
         return $sum;
     }
 
+    function search($name) {
+        $item = null;
+        // Перебираем товары циклом:
+        foreach ($this->products as $product) {
+            $search = $product->getName();
+            if($search === $name) {
+                $item = $product;
+            break;
+            }
+        
+        }
+        return $item;
+        
+        if($item == null) {
+            echo "Ничего не найдено";
+        } else {
+            echo $search;
+        }
 
-                function search($name) {
-                    $search = 0;
-                    // Перебираем товары циклом:
-                    foreach ($this->products as $product) {
-                        $search = $product->getName();
-                        if($search = $name) {
-                            return $product;
-                        }
-                    }
+        // for($i = 0; $i < count($this->products); $i++) {
+        //     $this->products[$i] == $name;
+        // }
 
-                    if($search == 0) {
-                        echo "Ничего не найдено";
-                    } else {
-                        echo $search;
-                    }
-                }
+        // $search = null; 
+        // foreach($this->products as $product) { 
+        //     if ($name == $product->getName()) { 
+        //         $search = $product;
+        // break; 
+        //     } 
+        // }
+        // return $search;
+    }
     //======================= /Вспомогательные/
 }
 
