@@ -29,12 +29,36 @@ class Interval
     
     public function toMonths()
     {
+        // вернет разницу в месяцах
+//         $objDate1 = $this->date1->__toString();
+//         $objDate2 = $this->date2->__toString();
+
+// //         $date2 = new DateTime("$objDate2");
+// //         $date1 = new DateTime("$objDate2");
+// // echo "<pre>";
+// // var_dump($date1);
+
+// //         $interval = $date2->diff($date1);
+
+// // var_dump($interval);
+
+// //         // return $interval->format('%m months');
+
+// // var_dump($interval->format('%m months'));
 
         $difference = strtotime($this->date2->__toString()) - 
         strtotime($this->date1->__toString());
 
         $this->arr['months'] = $difference/60/60/24/30.4166667;
         return $difference/60/60/24/30.4340278;
+
+//     $first_date = new DateTime("$objDate1");
+//     $second_date = new DateTime("$objDate2");
+    
+//     $difference = $second_date->diff($first_date);
+
+//     $this->arr['months'] = $difference->format("%m");
+//     return $this->format_interval($difference);
 
     }
     
@@ -46,6 +70,19 @@ class Interval
         $this->arr['years'] = $difference/60/60/24/30.4166667/12;
         return $difference/60/60/24/30.4340278/12;
 
+        // $objDate1 = $this->date1->__toString();
+        // $objDate2 = $this->date2->__toString();
+
+        // // вернет разницу в годах
+        // $first_date = new DateTime("$objDate1");
+        // $second_date = new DateTime("$objDate2");
+
+        // $interval = $second_date->diff($first_date);
+
+        // $this->arr['years'] = $interval->format("%y");
+        // return $interval->format("%y years ");
+
+        // // return $this->format_interval($difference);
     }
 
     function format_interval(DateInterval $interval) {
