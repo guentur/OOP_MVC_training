@@ -1,5 +1,5 @@
 <?php
-include "./Classes/(56)Date.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(56)Date/Date.php';
 // echo (new Date('2025-12-31'))->addDay(1) . "Проверка";  // '2026-01-01' 
 // // date("y.m.d")
 // $date = new Date();

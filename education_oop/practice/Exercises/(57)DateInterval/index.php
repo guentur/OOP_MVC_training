@@ -1,7 +1,7 @@
 <?php
 
-require_once './Classes/(57)dateInterval.php';
-require_once '(56)Date.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(57)DateInterval/DateInterval.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(56)Date/Date.php';
 
 $date1 = new Date('2025-12-31');
 $date2 = new Date('2026-11-28');

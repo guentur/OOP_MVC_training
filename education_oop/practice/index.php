@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-    include "index/(56)Date.php";
-    include "index/(57)dateInterval.php";
+    include $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(56)Date/index.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(57)DateInterval/index.php';
     
     ?>
 
