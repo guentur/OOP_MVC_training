@@ -138,7 +138,7 @@ class Tag implements iTag
                 if($value === true) {
                     $result .= " $name";
                 } else {
-                    $result .= " $name=\"$value\""; 
+                    $result .= " $name=\"$value\"";
                 }
             }
             return $result;
