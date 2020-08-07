@@ -15,5 +15,9 @@ require_once 'Tag.php';
     
 //     echo $input->setAttr('id', 'test')->setAttr('placeholder', 'Привет, набери в меня что-то')->removeAttr('id')->open() . "<br>"; // откроем тег
 
-
+$tag = new Tag('div');
+	echo $tag->setAttr('id', 'test')->setAttr('class', 'ooooo ddd hhh')->open() . "Привет"; // откроем тег
+    echo $tag->close(); // закроем тег
+    
+    var_dump($tag->getAttr('id'));
 ?>

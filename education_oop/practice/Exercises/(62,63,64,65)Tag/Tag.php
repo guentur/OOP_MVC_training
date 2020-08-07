@@ -1,9 +1,51 @@
 <?php
+interface iTag
+{
+    // Геттер имени:
+    public function getName();
+    
+    // Геттер текста:
+    public function getText();
+    
+    // Геттер всех атрибутов:
+    public function getAttrs();
+    
+    // Геттер одного атрибута по имени:
+    public function getAttr($name);
+    
+    // Открывающий тег, текст и закрывающий тег:
+    public function show();
+    
+    // Открывающий тег:
+    public function open();
+    
+    // Закрывающий тег:
+    public function close();
+    
+    // Установка текста:
+    public function setText($text);
+    
+    // Установка атрибута:
+    public function setAttr($name, $value = true);
+    
+    // Установка атрибутов:
+    public function setAttrs($attrs);
+    
+    // Удаление атрибута:
+    public function removeAttr($name);
+    
+    // Установка класса:
+    public function addClass($className);
+    
+    // Удаление класса:
+    public function removeClass($className);
+}
 
-class Tag
+class Tag implements iTag
 {
     private $name;
     private $attr = [];
+    private $text;
 
     function __construct($name)
     {
@@ -11,11 +53,17 @@ class Tag
     }
 
 //===============Работа с атрибутами
-    function setAttr($name, $value)
+    function setAttr($name, $value = true)
     {
         $this->attr[$name] = $value;
         return $this;
     }
+
+    function setText($text) {
+        $this->text = $text;
+        return $this;
+    }
+
     function setAttrs($attrs)
     {
         if(is_array($attrs)) {
@@ -75,9 +123,13 @@ class Tag
     {
         return "</$this->name>";
     }
+
+    function show() {
+        return $this->open() . $this->text . $this->close();
+    }
 //===============Открыть/закрыть тег
 
-//Вспомогательные функции
+//===============Вспомогательные функции
     private function getAttrsStr($arrAttr)
     {
         $result = '';
@@ -94,7 +146,38 @@ class Tag
             return '';
         }
     }
-//Вспомогательные функции
+
+    private function removeElem($elem, $arr) {
+        $key = array_search($elem, $arr);
+        array_slice($arr, $key, 1);
+
+        return $arr;
+    }
+//===============Вспомогательные функции
+
+//=============== Функции-геттеры
+
+    function getName() {
+        return $this->name;
+    }
+
+    function getText() {
+        return $this->text;
+    }
+
+    function getAttrs() {
+        return $this->attr;
+    }
+
+    function getAttr($name) {
+        if(isset($this->attr[$name])) {
+           return $this->attr[$name]; 
+        } else {
+            return null;
+        }
+        
+    }
+//=============== Функции-геттеры
 
 }
 
