@@ -3,6 +3,8 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(57)DateInterval/DateInterval.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(56)Date/Date.php';
 
+include $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/menu.php';
+
 $date1 = new Date('2025-12-31');
 $date2 = new Date('2026-11-28');
 

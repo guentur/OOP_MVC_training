@@ -61,6 +61,7 @@ class Tag implements iTag
 
     function setText($text) {
         $this->text = $text;
+        // var_dump($this->text);
         return $this;
     }
 
@@ -171,7 +172,8 @@ class Tag implements iTag
 
     function getAttr($name) {
         if(isset($this->attr[$name])) {
-           return $this->attr[$name]; 
+            // var_dump($this->attr[$name]);
+            return $this->attr[$name]; 
         } else {
             return null;
         }

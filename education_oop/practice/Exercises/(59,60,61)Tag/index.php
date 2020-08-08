@@ -1,6 +1,6 @@
 <?php
 require_once 'Tag.php';
-
+include $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/menu.php';
 // $input = new Tag('input', ['id' => 'test', 'class' => 'eee bbb']);
 $input = new Tag('input');
 $div = new Tag('div');
