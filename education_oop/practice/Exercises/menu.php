@@ -36,6 +36,9 @@ echo (new Tag('div'))
 echo (new Tag('div'))
     ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(70)HtmlList/')->setText('Задания класс HtmlList')->show())
     ->show();
+echo (new Tag('div'))
+    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(71)Form/')->setText('Задания класс Form')->show())
+    ->show();
 
 echo $div->close();
 // ->setAttrs(['style'=>"float: right"])
