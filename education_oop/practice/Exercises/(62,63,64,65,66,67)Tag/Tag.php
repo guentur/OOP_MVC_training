@@ -172,7 +172,7 @@ class Tag implements iTag
 
     function getAttr($name) {
         if(isset($this->attr[$name])) {
-            // var_dump($this->attr[$name]);
+            //Вернуть значения атрибута
             return $this->attr[$name]; 
         } else {
             return null;

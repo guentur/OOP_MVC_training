@@ -1,21 +1,10 @@
 <?php
+//Для работы меню нужно использовать класс Link
 require_once $_SERVER['DOCUMENT_ROOT'] . '/education_oop/practice/Exercises/(69)Link/Link.php';
 
 $div = new Tag('div');
 $div->setAttrs(['style'=>"float: right"]);
 
-// echo $ul->setText(  (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(69)Link/')->setText('Заданя класс Link')->show())->show()
-//                     (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(68)classImage/')->setText('Заданя класс Link')->show())->show()
-//                     (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(62,63,64,65,66,67)Tag/')->setText('Заданя класс Link')->show())->show()
-//                     (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(57)DateInterval/')->setText('Заданя класс Link')->show())->show()
-//                     (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(56)Date/')->setText('Заданя класс Link')->show())->show()
-// )->show()
-// echo (new Tag('div'))
-//     ->setAttrs(['style'=>"float: right"])
-//     ->setText(  (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(69)Link/')->setText('Заданя класс Link')->show())->show()
-//                 (new Tag('li'))->setText((new Link())->setAttr('href', 'http://oopphpn1.local/education_oop/practice/Exercises/(68)classImage/')->setText('Заданя класс Image')->show())->show()
-//             )
-//     ->show();
 echo $div->open();
 
 echo (new Tag('div'))
@@ -40,17 +29,13 @@ echo (new Tag('div'))
     ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(71)Form/')->setText('Задания класс Form')->show())
     ->show();
 echo (new Tag('div'))
-    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(72,73)Input,Submit/')->setText('Задания класс Input')->show())
+    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(72,73,74,75)Input,Submit,Password,Hidden/')->setText('Задания класс Input, Submit, Password, Hidden')->show())
+    ->show();
+echo (new Tag('div'))
+    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(76)Textarea/')->setText('Задания класс Textarea')->show())
     ->show();
 
 echo $div->close();
 // ->setAttrs(['style'=>"float: right"])
 
-
 ?>
-
-<style>
-    .active {
-        background: rgba(72, 161, 72, 0.671);
-    }
-</style>
