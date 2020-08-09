@@ -34,6 +34,15 @@ echo (new Tag('div'))
 echo (new Tag('div'))
     ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(76)Textarea/')->setText('Задания класс Textarea')->show())
     ->show();
+echo (new Tag('div'))
+    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(77)Checkbox/')->setText('Задания класс Checkbox')->show())
+    ->show();
+echo (new Tag('div'))
+    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(77)Radio/')->setText('Задания класс Radio')->show())
+    ->show();
+echo (new Tag('div'))
+    ->setText((new Link())->setAttr('href', '/education_oop/practice/Exercises/(76)Textarea/')->setText('Задания класс Select')->show())
+    ->show();
 
 echo $div->close();
 // ->setAttrs(['style'=>"float: right"])
