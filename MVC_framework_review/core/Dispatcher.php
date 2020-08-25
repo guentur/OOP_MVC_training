@@ -5,6 +5,7 @@
 	{
 		public function getPage(Track $track)
 		{
+			//ucfirst - первая буква строки большая. Могут возникнуть проблемы с charset
 			$className = ucfirst($track->controller) . 'Controller';
 			$fullName = "\\Project\\Controllers\\$className";
 			
