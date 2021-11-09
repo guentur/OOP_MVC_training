@@ -1,5 +1,5 @@
 <?php
-require_once "../classes/City.php";
+require_once "City.php";
 
 $cities = [
     new City("Новая Каховка", 46044),
@@ -10,7 +10,8 @@ $cities = [
 ];
 
 foreach($cities as $city) {
-    echo $city->getName() . ' ' . $city->population . " населения " .'<br />';
+    echo $city->getName() . 
+        ' ' . $city->population . " населения " .'<br />';
 }
 
 
