@@ -17,4 +17,5 @@ echo $arrayAvgHelper->getAvg2($array, 1) . "<br />";
 echo $arrayAvgHelper->getAvg3($array, 1) . "<br />";
 // Вывести корень 2 степени из суммы елементов массива в четвертой степени
 echo $arrayAvgHelper->getAvg4($array, 1) . "<br />";
+
 ?>
